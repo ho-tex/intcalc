@@ -57,7 +57,7 @@
 %    use A4 as paper format:
 %       \PassOptionsToClass{a4paper}{article}
 %
-%    Programm calls to get the documentation (example):
+%    Program calls to get the documentation (example):
 %       pdflatex intcalc.dtx
 %       makeindex -s gind.ist intcalc.idx
 %       pdflatex intcalc.dtx
@@ -247,7 +247,7 @@ and the derived files
 % The package contains two implementations of the operations.
 % If \eTeX\ is detected then the macros are implemented
 % using its features (\cs{numexpr}). Otherwise the slower
-% implementation without \eTeX's help is choosen.
+% implementation without \eTeX's help is chosen.
 %
 % \subsection{Conditions}
 %
@@ -262,7 +262,7 @@ and the derived files
 %   The arguments are limited to the range
 %   -2147483647 until 2147483647. These numbers belong to the range.
 %   Note that some operations
-%   have additionals restrictions to the range.
+%   have additional restrictions on the range.
 % \item
 %   The argument may be expressions that \cs{numexpr}
 %   understands if \eTeX\ is available.
@@ -309,7 +309,7 @@ and the derived files
 % The name of the control sequence contains
 % the reason for the error. The \TeX\ error may be ignored.
 % Then the operation returns zero as result.
-% Because the macros are supposed to work in expandible contexts.
+% Because the macros are supposed to work in expandable contexts.
 % An traditional error message, however, is not expandable and
 % would break these contexts.
 %
@@ -2778,7 +2778,7 @@ and the derived files
 %    \begin{macrocode}
 \def\InCa@@Div#1!#2!{%
   \ifnum#1>#2 %
-    \ifcase#2 % 0 already catched
+    \ifcase#2 % 0 already caught
 ?     \IntCalcError:ThisCannotHappen%
     \or % 1
       #1%
@@ -2990,7 +2990,7 @@ and the derived files
       \ifcase#1 %
         0%
       \else
-        \ifcase#2 % 0 already catched
+        \ifcase#2 % 0 already caught
 ?         \IntCalcError:ThisCannotHappen%
         \or % 1
           0%
@@ -3028,7 +3028,7 @@ and the derived files
       \ifcase##1 %
         0%
       \else
-        \ifcase##2 % 0 already catched
+        \ifcase##2 % 0 already caught
 ?         \IntCalcError:ThisCannotHappen
         \or % 1
           0%
